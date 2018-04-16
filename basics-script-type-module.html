@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>ES modules in the browser - almost - now | Basics: script type module</title>
+</head>
+
+<body>
+	<!-- Use a type set to "module" with a fallback -->
+	<script type="module" src="app.js"></script>
+	<script nomodule src="fallback.js"></script>
+
+	<!-- Or inline the script -->
+	<script type="module">
+		import App from "./app.js";
+		console.log(App);
+	</script>
+</body>
+
+</html>

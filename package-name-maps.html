@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>ES modules in the browser - almost - now | Package name maps</title>
+</head>
+
+<body>
+	<!-- Declare the package map -->
+	<script type="packagemap">
+		{
+			"path_prefix": "/node_modules",
+			"packages": {
+				"lodash": { "path": "lodash-es", "main": "lodash.js" }
+			}
+		}
+	</script>
+
+	<!-- Bare import will be mapped -->
+	<script type="module">
+		import { clamp } from "lodash";
+		// => import { partition } from "/node_modules/lodash-es/lodash.js";
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>ES modules in the browser - almost - now | Service worker</title>
+</head>
+
+<body>
+	<script>
+		// Register
+		navigator.serviceWorker
+			.register("sw.js")
+			.then(() => console.log("Service Worker registered"))
+			.catch(err => console.err(err));
+	</script>
+	<script type="module" src="app.js"></script>
+</body>
+
+</html>
